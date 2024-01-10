@@ -1,0 +1,56 @@
+.App {
+  max-width: 1208px;
+  margin: 0 auto;
+  text-align: center;
+  --box-shadow: 0 0 1px hsla(0, 0%, 0%, 0.795), 0 0 2px hsl(0deg 0% 0% / 0.075),
+  0 0 4px hsla(0, 0%, 0%, 0.856), 0 0 8px hsl(0deg 0% 0% / 0.075),
+  0 0 16px hsla(0, 0%, 0%, 0.89);
+  --border-radius: 15px;
+  --border-right: 1px solid white;
+}
+button,span{
+  margin: 30px auto;
+  width: 100px;
+  height: 5%;
+  background: yellow;
+  font-size: 20px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  color: black;
+  padding: 3px;
+  box-shadow: var(--box-shadow);
+}
+ul{
+  padding: 0;
+}
+.li-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: 0px auto 20px;
+  background: #000000c4;
+  border-radius: var(--border-radius);
+  padding: 15px;
+  color: white;
+  box-shadow: var(--box-shadow);
+}
+h1{
+  font-size: 34px;
+  white-space: nowrap;
+}
+h1,h6,p,span{
+  /* border-right: var(--border-right); */
+  margin-right: 10px;
+}
+h6{
+  font-size: 18px;
+  margin: 30px auto;
+}
+p{
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
