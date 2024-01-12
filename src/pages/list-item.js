@@ -6,10 +6,7 @@ const ListItem = ({el}) => (
         <h1>{el['title'].slice(0, 6)}</h1>
         <p>{el['body']}</p>
         
-        <Link to={{
-            pathname: '/list-item-description',
-            state: { el }
-        }}><button>просмотр</button></Link>
+        <Link to='/list-item-description/:id'><button>просмотр</button></Link>
     </li>
 ) 
 export default ListItem
