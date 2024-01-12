@@ -1,29 +1,29 @@
 import { useState } from 'react';
-import './App.css';
+import ListItem from '../pages/list-item';
+
+import './styles/index.css'
+import './styles/normalize.css'
+import './styles/vars.css'
 
 const App = () => {
 
   const [ data, setData ] = useState([])
-
+    
   async function fetchData() {
     const requestURL = 'https://jsonplaceholder.typicode.com/posts'
     const request = new Request(requestURL)
     const response = await fetch(request)
     const fetchedData = await response.json()
     setData(fetchedData)
-  } 
+  }
+    
   return (
     <div className="App">
-      <button onClick={fetchData}>CLICK</button>
+      <button onClick={fetchData}>get data</button>
       <ul>
         {data.map(el => {
           return (
-            <li className='li-container' key={el['id']}>
-              <span>№{el['id']}</span>
-              <h1>{el['title'].slice(0,4)}</h1>
-              <p>{el['body']}</p>
-              <button>просмотр</button>
-            </li>
+            <ListItem el={el}/>
           )
         })}
       </ul>

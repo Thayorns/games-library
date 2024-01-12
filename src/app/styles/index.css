@@ -1,12 +1,8 @@
+
 .App {
   max-width: 1208px;
   margin: 0 auto;
   text-align: center;
-  --box-shadow: 0 0 1px hsla(0, 0%, 0%, 0.795), 0 0 2px hsl(0deg 0% 0% / 0.075),
-  0 0 4px hsla(0, 0%, 0%, 0.856), 0 0 8px hsl(0deg 0% 0% / 0.075),
-  0 0 16px hsla(0, 0%, 0%, 0.89);
-  --border-radius: 15px;
-  --border-right: 1px solid white;
 }
 button,span{
   margin: 30px auto;
@@ -38,11 +34,10 @@ ul{
 }
 h1{
   font-size: 34px;
-  white-space: nowrap;
+  white-space: var(--noWrapText);
 }
 h1,h6,p,span{
-  /* border-right: var(--border-right); */
-  margin-right: 10px;
+  margin-right: 20px;
 }
 h6{
   font-size: 18px;
@@ -50,7 +45,11 @@ h6{
 }
 p{
   font-size: 16px;
-  white-space: nowrap;
+  white-space: var(--noWrapText);
   overflow: hidden;
   text-overflow: ellipsis;
+}
+#error-page{
+  margin: 100px auto;
+  text-align: center;
 }
