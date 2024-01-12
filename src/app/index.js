@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ListItem from '../pages/list-item';
 
-import './styles/index.css'
+import './index.css'
 import './styles/normalize.css'
 import './styles/vars.css'
 
