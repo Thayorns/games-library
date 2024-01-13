@@ -49,7 +49,12 @@ p{
   overflow: hidden;
   text-overflow: ellipsis;
 }
-#error-page{
+#error-page,
+.item-description{
   margin: 100px auto;
   text-align: center;
+}
+.item-description button{
+  float: right;
+  margin-right: 15px;
 }
