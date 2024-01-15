@@ -51,10 +51,19 @@ p{
 }
 #error-page,
 .item-description{
+  position: relative;
+  width: 100%;
   margin: 100px auto;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
-.item-description button{
-  float: right;
-  margin-right: 15px;
+.item-description >h1,
+.item-description >p {
+  white-space: wrap;
+  margin: 0px auto;
+  width: 80%;
+  padding: 10px;
 }

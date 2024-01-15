@@ -20,11 +20,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/list-item-description/:id",
-    element: <ListItemDescription/>
+    element: <ListItemDescription/>,
   },
   {
     path: "/",
-    element: <ListItem/>
+    element: <ListItem/>,
   }
   
 ]);
