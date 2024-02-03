@@ -1,38 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-
+import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
 import store from './app/store/store';
-import App from './app/index';
-import ErrorPage from "./pages/error-page";
-import ListItemDescription from './pages/list-item-description';
-import ListItem from './pages/list-item';
+import App from './app/App';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App/>,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/list-item-description/:id",
-    element: <ListItemDescription/>,
-  },
-  {
-    path: "/",
-    element: <ListItem/>,
-  }
-  
-]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <App/>
     </Provider> 
   </React.StrictMode>
 );
