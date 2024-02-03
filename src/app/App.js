@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
-import ListItem from '../features/posts/list-item';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import ItemsList from '../features/posts/itemsList';
 
 import './index.css'
 import './styles/normalize.css'
@@ -7,24 +7,16 @@ import './styles/vars.css'
 
 const App = () => {
   
-
   return (
     <Router>
       <div className="App">
-        <Switch>
+        <Routes>
 
-          <Route exact 
-            path="/"
-            render={() => (
-              <ul>
-                <ListItem/>
-              </ul>
-            )} 
+          <Route path="/"
+            element={<ItemsList/>}
           />
 
-          <Redirect to="/" />
-
-        </Switch>
+        </Routes>
       </div>
     </Router>
   )

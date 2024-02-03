@@ -5,7 +5,7 @@
   text-align: center;
 }
 button,span{
-  margin: 30px auto;
+  /* margin: 30px auto; */
   width: 100px;
   height: 5%;
   background: yellow;
@@ -21,7 +21,7 @@ ul{
 }
 .li-container{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   width: 90%;

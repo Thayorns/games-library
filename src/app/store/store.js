@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { dataReducer } from '../../features/posts/dataReducer'
+import itemsReducer from '../../features/posts/itemsSlice'
 
 const store = configureStore({
     reducer: {
-        data: dataReducer,
+        items: itemsReducer,
     },
 }) 
 export default store

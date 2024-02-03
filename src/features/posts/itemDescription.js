@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux'
 import { Link } from "react-router-dom"
 import { useParams } from 'react-router-dom';
 
-const ListItemDescription = () => {
+const itemsDescription = () => {
     const { id } = useParams()
     const item = useSelector(state => state.data.find(el => el.id === Number(id)))
     
@@ -18,4 +18,4 @@ const ListItemDescription = () => {
         </div>
     )
 }
-export default ListItemDescription
+export default itemsDescription
