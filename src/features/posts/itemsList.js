@@ -4,17 +4,17 @@ import { useSelector } from 'react-redux'
 const ItemsList = () => {
 
     const items = useSelector(state => state.items)
-    const renderedPosts = items.map(item => (
-            <li className='li-container'>
-                <span>№{item['id']}</span>
-                <h1>{item['title'].slice(0, 6)}</h1>
+    const renderedPosts = items.map((item,index) => (
+            <li className='li-container' key={index}>
+                <span># {item['id']}</span>
+                <h2>{item['title'].slice(0, 6)}</h2>
                 <p>{item['body']}</p>
             </li>
         )
     )
     return (
         <section>
-            <h2>Posts</h2>
+            <h1>Posts</h1>
             {renderedPosts}
         </section>
     )

@@ -8,7 +8,7 @@ button,span{
   /* margin: 30px auto; */
   width: 100px;
   height: 5%;
-  background: yellow;
+  background: rgb(255, 255, 255);
   font-size: 20px;
   border-radius: var(--border-radius);
   cursor: pointer;
@@ -23,20 +23,24 @@ ul{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  align-items:flex-start;
   width: 90%;
   margin: 0px auto 20px;
-  background: #000000c4;
   border-radius: var(--border-radius);
   padding: 15px;
-  color: white;
+  color: rgb(0, 0, 0);
   box-shadow: var(--box-shadow);
+  background: #ffffff;
 }
 h1{
+  font-size: 40px;
+  color: white;
+}
+h2{
   font-size: 34px;
   white-space: var(--noWrapText);
 }
-h1,h6,p,span{
+h2,h6,p,span{
   margin-right: 20px;
 }
 h6{
@@ -44,7 +48,7 @@ h6{
   margin: 30px auto;
 }
 p{
-  font-size: 16px;
+  font-size: 18px;
   white-space: var(--noWrapText);
   overflow: hidden;
   text-overflow: ellipsis;
