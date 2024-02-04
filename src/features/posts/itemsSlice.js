@@ -11,5 +11,4 @@ const itemsSlice = createSlice({
 
   }
 })
-
 export default itemsSlice.reducer

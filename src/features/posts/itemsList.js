@@ -1,4 +1,4 @@
-// import { Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { useSelector } from 'react-redux'
 
 const ItemsList = () => {
@@ -9,6 +9,9 @@ const ItemsList = () => {
                 <span># {item['id']}</span>
                 <h2>{item['title'].slice(0, 6)}</h2>
                 <p>{item['body']}</p>
+                <Link to={`/items/${item['id']}`} className="button-view-post">
+                    View Post 
+                </Link>
             </li>
         )
     )

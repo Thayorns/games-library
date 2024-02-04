@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import ItemsList from '../features/posts/itemsList';
+import ItemDescription from '../features/posts/itemDescription';
 
 import './index.css'
 import './styles/normalize.css'
@@ -15,7 +16,9 @@ const App = () => {
           <Route path="/"
             element={<ItemsList/>}
           />
-
+          <Route path="/items/:itemId" 
+            element={<ItemDescription/>} 
+          />
         </Routes>
       </div>
     </Router>

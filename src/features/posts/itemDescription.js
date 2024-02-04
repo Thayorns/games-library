@@ -2,20 +2,20 @@ import { useSelector } from 'react-redux'
 import { Link } from "react-router-dom"
 import { useParams } from 'react-router-dom';
 
-const itemsDescription = () => {
-    const { id } = useParams()
-    const item = useSelector(state => state.data.find(el => el.id === Number(id)))
+const ItemDescription = () => {
+    const { itemId } = useParams()
+    const item = useSelector(state => state.items.find(el => el.id === itemId))
     
     return (
         <div className="item-description">
             <h1>
                 {item.title}
             </h1>
-            <p>
+            <p className='item-description-paragraph'>
                 {item.body}
             </p>
-            <Link to='/'><button>назад</button></Link>
+            <Link to='/' className="button-view-post">Back to posts</Link>
         </div>
     )
 }
-export default itemsDescription
+export default ItemDescription

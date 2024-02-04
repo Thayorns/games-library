@@ -4,9 +4,9 @@
   margin: 0 auto;
   text-align: center;
 }
-button,span{
+a.button-view-post,span{
   /* margin: 30px auto; */
-  width: 100px;
+  width: 150px;
   height: 5%;
   background: rgb(255, 255, 255);
   font-size: 20px;
@@ -15,6 +15,10 @@ button,span{
   color: black;
   padding: 3px;
   box-shadow: var(--box-shadow);
+}
+a.button-view-post{
+  /* float: right; */
+  text-decoration: none;
 }
 ul{
   padding: 0;
@@ -53,6 +57,9 @@ p{
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.item-description-paragraph{
+  color: white;
+}
 #error-page,
 .item-description{
   position: relative;
@@ -67,7 +74,7 @@ p{
 .item-description >h1,
 .item-description >p {
   white-space: wrap;
-  margin: 0px auto;
+  margin: 50px auto;
   width: 80%;
   padding: 10px;
 }
