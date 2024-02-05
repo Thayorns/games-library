@@ -20,6 +20,9 @@ a.button-view-post{
   /* float: right; */
   text-decoration: none;
 }
+a.button-view-post:hover{
+  box-shadow: rgba(0, 0, 0, 0.623) 1px 1px 3px 1px, rgba(27, 31, 35, 0.495) 0px 0px 0px 1px;
+}
 ul{
   padding: 0;
 }
@@ -57,12 +60,14 @@ p{
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.item-description-paragraph{
-  color: white;
+.item-description h1,.item-description a.button-view-post{
+  color: rgb(0, 0, 0);
+  margin-bottom: 30px;
 }
 #error-page,
 .item-description{
   position: relative;
+  background: #ffffff;
   width: 100%;
   margin: 100px auto;
   text-align: center;

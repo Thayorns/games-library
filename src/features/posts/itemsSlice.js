@@ -1,14 +1,22 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-const initialState = [
-  { id: '1', title: 'First Post!', body: 'Hello!' },
-  { id: '2', title: 'Second Post', body: 'More text' }
-]
+const initialState = {
+  posts: [],
+  status: 'idle',
+  error: null
+}
+export const fetchPosts = createAsyncThunk('items/fetchPosts', async () => {
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+  const data = await response.json()
+  initialState.posts.push(...data)
+  return initialState.posts
+})
+console.log(initialState.posts);
 const itemsSlice = createSlice({
   name: 'items',
   initialState,
   reducers: {
-
+    
   }
 })
 export default itemsSlice.reducer
