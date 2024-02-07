@@ -16,7 +16,7 @@ const App = () => {
           <Route path="/"
             element={<ItemsList/>}
           />
-          <Route path="/items/:itemId" 
+          <Route path="/posts/:itemId" 
             element={<ItemDescription/>} 
           />
         </Routes>

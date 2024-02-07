@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 
 const ItemDescription = () => {
     const { itemId } = useParams()
-    const item = useSelector(state => state.items.find(el => el.id === itemId))
+    const item = useSelector(state => state.items.posts.find(el => el.id === itemId))
     
     return (
         <div className="item-description">

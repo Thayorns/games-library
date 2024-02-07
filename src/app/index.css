@@ -54,7 +54,9 @@ h6{
   font-size: 18px;
   margin: 30px auto;
 }
-p{
+.li-container p{
+  padding: 5px;
+  width: 80%;
   font-size: 18px;
   white-space: var(--noWrapText);
   overflow: hidden;
