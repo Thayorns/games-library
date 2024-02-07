@@ -1,11 +1,12 @@
 import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import { useSelector, useDispatch } from 'react-redux'
-import { fetchPosts } from "./itemsSlice"
+import { selectAllPosts, fetchPosts } from "./itemsSlice"
+
 
 const ItemsList = () => {
     const dispatch = useDispatch()
-    const items = useSelector(state => state.items.posts)
+    const items = useSelector(selectAllPosts)
     const postStatus = useSelector(state => state.items.status)
 
     useEffect(() => {
@@ -19,7 +20,7 @@ const ItemsList = () => {
                 <span># {item.id}</span>
                 <h2>{item.title.slice(0, 6)}</h2>
                 <p>{item.body}</p>
-                <Link to={`/items/posts/${item.id}`} className="button-view-post">
+                <Link to={`/posts/${item.id}`} className="button-view-post">
                     View Post
                 </Link>
             </li>
