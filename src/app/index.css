@@ -4,6 +4,17 @@
   margin: 0 auto;
   text-align: center;
 }
+.ant-spin .ant-spin-dot-spin{
+  background: transparent;
+  width: 55px;
+  height: 55px;
+  box-shadow: none;
+}
+.ant-spin .ant-spin-dot-item{
+  background: white;
+  width: 25px;
+  height: 25px;
+}
 a.button-view-post,span{
   /* margin: 30px auto; */
   width: 150px;
