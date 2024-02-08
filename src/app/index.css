@@ -5,6 +5,7 @@
   text-align: center;
 }
 .ant-spin .ant-spin-dot-spin{
+  margin-top: 200px;
   background: transparent;
   width: 55px;
   height: 55px;

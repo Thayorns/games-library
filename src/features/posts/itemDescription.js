@@ -1,16 +1,20 @@
-import { useSelector } from 'react-redux'
 import { Link } from "react-router-dom"
 import { useParams } from 'react-router-dom'
-import { selectPostById } from './itemsSlice'
+import { Spin } from 'antd'
+import { useGetPostQuery } from "../api/apiSlice"
+
 
 const ItemDescription = () => {
     const { itemId } = useParams()
-    const item = useSelector((state) => selectPostById(state, Number(itemId)))
-    console.log(item)
-    if (!item) {
-        return <h1 className='post-not-found'>Post not found!</h1>
-    }else{
-        return (
+    
+    const {data: item, isFetching, isSuccess } = useGetPostQuery(itemId)
+
+    let content
+
+    if(isFetching){
+        content = <Spin/>
+    }else if(isSuccess){
+        content = (
             <div className="item-description">
                 <h1>
                     {item.title}
@@ -22,5 +26,6 @@ const ItemDescription = () => {
             </div>
         )
     }
+    return <div>{content}</div>
 }
 export default ItemDescription

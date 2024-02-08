@@ -1,26 +1,15 @@
-import { useEffect } from "react"
 import { Link } from "react-router-dom"
-import { useSelector, useDispatch } from 'react-redux'
-import { selectAllPosts, fetchPosts } from "./itemsSlice"
 import { Spin } from 'antd'
+import { useGetPostsQuery } from "../api/apiSlice"
 
 const ItemsList = () => {
-    const dispatch = useDispatch()
-    const items = useSelector(selectAllPosts)
-    const postStatus = useSelector(state => state.items.status)
-    const error = useSelector(state => state.items.error)
-    useEffect(() => {
-        if (postStatus === 'idle') {
-          dispatch(fetchPosts())
-        }
-    }, [postStatus, dispatch])
-
+    const { data: posts, isLoading, isSuccess, isError, error } = useGetPostsQuery()
     let content
 
-    if(postStatus === 'loading'){
+    if(isLoading){
         content = <Spin />
-    }else if(postStatus === 'succeeded'){
-        content = items.map((item,index) => (
+    }else if(isSuccess){
+        content = posts.map((item,index) => (
             <li className='li-container' key={index}>
                 <span># {item.id}</span>
                 <h2>{item.title.slice(0, 6)}</h2>
@@ -30,7 +19,7 @@ const ItemsList = () => {
                 </Link>
             </li>)    
         )
-    }else if(postStatus === 'failed'){
+    }else if(isError){
         content = <div>{error}</div>
     }
     
