@@ -1,9 +1,29 @@
 import { Link } from "react-router-dom"
 import { Spin } from 'antd'
 import { useGetPostsQuery } from "../api/apiSlice"
+import { useEffect, useState } from "react"
 
 const ItemsList = () => {
-    const { data: posts, isLoading, isSuccess, isError, error } = useGetPostsQuery()
+    const [start, setStart] = useState(0)
+    const [limit, setLimit] = useState(5)
+    const { data: posts, isLoading, isSuccess, isError, error, refetch } = useGetPostsQuery({ limit, start })
+
+    const handleScroll = () => {
+        if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight) return
+        // setStart((prevStart) => prevStart + 5)
+        setLimit((prevLimit) => prevLimit + 5)
+        refetch({ limit: limit + 5 })
+    }
+    
+    // useEffect(() => {
+        
+    // },[])
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, )
+
     let content
 
     if(isLoading){
@@ -20,7 +40,7 @@ const ItemsList = () => {
             </li>)    
         )
     }else if(isError){
-        content = <div>{error}</div>
+        content = <div id="error-page">Error: 'something went wrong' {error.message}</div>
     }
     
 

@@ -78,7 +78,6 @@ h6{
   color: rgb(0, 0, 0);
   margin-bottom: 30px;
 }
-#error-page,
 .item-description{
   position: relative;
   background: #ffffff;
@@ -89,6 +88,9 @@ h6{
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+#error-page{
+  color: white;
 }
 .item-description >h1,
 .item-description >p {
