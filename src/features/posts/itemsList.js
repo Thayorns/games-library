@@ -4,20 +4,18 @@ import { useGetPostsQuery } from "../api/apiSlice"
 import { useEffect, useState } from "react"
 
 const ItemsList = () => {
-    const [start, setStart] = useState(0)
     const [limit, setLimit] = useState(5)
-    const { data: posts, isLoading, isSuccess, isError, error, refetch } = useGetPostsQuery({ limit, start })
+    const { data: posts, isLoading, isSuccess, isError, error, refetch } = useGetPostsQuery({ limit, start: 0 })
 
     const handleScroll = () => {
         if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight) return
-        // setStart((prevStart) => prevStart + 5)
-        setLimit((prevLimit) => prevLimit + 5)
-        refetch({ limit: limit + 5 })
+        setLimit(limit + 5)
     }
     
-    // useEffect(() => {
-        
-    // },[])
+    useEffect(() => {
+        refetch()
+          .unwrap()
+      }, [refetch])
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll)
@@ -47,7 +45,9 @@ const ItemsList = () => {
     return (
         <section>
             <h1>Posts</h1>
-            {content}
+            <>
+                {content}
+            </>
         </section>
     )
 }

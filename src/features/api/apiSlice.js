@@ -5,13 +5,7 @@ export const apiSlice = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: 'https://jsonplaceholder.typicode.com' }),
   endpoints: (builder) => ({
     getPosts: builder.query({
-      query: ({ limit = 5, start = 0 }) => ({
-        url: '/posts',
-        params: {
-          _limit: limit,
-          _start: start,
-        },
-      }),
+      query: ({ limit = 5, start = 0 }) => `/posts?_limit=${limit}&_start=${start}`,
     }),
     getPost: builder.query({
       query: (itemId) => `/posts/${itemId}`
