@@ -5,7 +5,7 @@
   text-align: center;
 }
 .ant-spin .ant-spin-dot-spin{
-  margin-top: 20px;
+  margin-top: 200px;
   background: transparent;
   width: 55px;
   height: 55px;
@@ -15,6 +15,7 @@
   background: white;
   width: 25px;
   height: 25px;
+  /* margin: 130px auto; */
 }
 a.button-view-post,span{
   /* margin: 30px auto; */
@@ -89,8 +90,10 @@ h6{
   justify-content: space-around;
   align-items: center;
 }
-#error-page{
+#error-page,
+.newposts-loading{
   color: white;
+  font-size: 35px;
 }
 .item-description >h1,
 .item-description >p {
@@ -98,4 +101,7 @@ h6{
   margin: 50px auto;
   width: 80%;
   padding: 10px;
+}
+.newposts-loading{
+  margin-top: 50px;
 }
