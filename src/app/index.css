@@ -105,3 +105,9 @@ h6{
 .newposts-loading{
   margin-top: 50px;
 }
+.active{
+  visibility: visible;
+}
+.active-none{
+  visibility: hidden;
+}
