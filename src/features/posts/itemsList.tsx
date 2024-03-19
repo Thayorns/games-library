@@ -11,8 +11,8 @@ const ItemsList = () => {
     const [isFetching, setIsFetching] = useState(false)
     let content
     
-    const handleClick = (e: string) => {
-      if(e === 'click'){ //e.type
+    const handleClick = (e: any) => {
+      if(e.type === 'click'){ //e.type
         setLimit((prevLimit) => prevLimit + 5)
         setNewPosts(
           (prevNewPosts) => [...prevNewPosts, ...posts]//useState<any[]>
@@ -33,11 +33,7 @@ const ItemsList = () => {
       title: string
       body: string
     }
-    // type FetchBaseQuerryError = {
-    //   status: number
-    //   data: unknown
-    //   message: string
-    // }
+
     if (isLoading) {
       content = <Spin />
     } else if (isSuccess) {
@@ -60,8 +56,7 @@ const ItemsList = () => {
         <h1>Posts</h1>
         <ul>
           {content}
-          {/* тут видимо вернуть строку изза e */}
-          <button className={isLoading ? 'active-none' : 'active'} onClick={()=> handleClick}>Load more posts</button>
+          <button className={isLoading ? 'active-none' : 'active'} onClick={handleClick}>Load more posts</button>
           {isFetching && (<ul className="newposts-loading">loading...</ul>)}
         </ul>
       </section>
