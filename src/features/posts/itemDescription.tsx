@@ -2,13 +2,15 @@ import React from "react"
 import { Link } from "react-router-dom"
 import { useParams } from 'react-router-dom'
 import { Spin } from 'antd'
-import { useGetPostQuery } from "../api/apiSlice"
-
+import { useGetGameQuery } from "../api/apiSlice"
+import { Button } from 'antd'
 
 const ItemDescription = () => {
-    const { itemId } = useParams()
+    const { id } = useParams()
     
-    const {data: item, isFetching, isSuccess } = useGetPostQuery(itemId)
+    const {data: item, isFetching, isSuccess } = useGetGameQuery(id)
+    console.log(id);
+    
 
     let content
 
@@ -17,13 +19,15 @@ const ItemDescription = () => {
     }else if(isSuccess){
         content = (
             <div className="item-description">
-                <h1>
-                    {item.title}
-                </h1>
+                <span className='item-description-span'>id - {id}</span>
+                <h6>
+                    {item.name}
+                </h6>
                 <p className='item-description-paragraph'>
-                    {item.body}
+                    {item.description}
                 </p>
-                <Link to='/' className="button-view-post">Back to posts</Link>
+                {/* <img src={} alt=""/> */}
+                <Link to='/' className="button-view-post"><Button>назад</Button></Link>
             </div>
         )
     }

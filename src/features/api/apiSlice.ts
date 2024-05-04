@@ -2,14 +2,18 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export const apiSlice = createApi({
   reducerPath: 'api',
-  baseQuery: fetchBaseQuery({ baseUrl: 'https://jsonplaceholder.typicode.com' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://api.rawg.io/api/games?key=71c319a9886e4b2283f2eacd42d57b7d' }),
   endpoints: (builder) => ({
-    getPosts: builder.query({
-      query: ({ limit = 5, start = 0 }) => `/posts?_limit=${limit}&_start=${start}`,
+    getGames: builder.query({
+      query: ({ page = 1, pageSize = 10 }) => `
+        https://api.rawg.io/api/games?key=71c319a9886e4b2283f2eacd42d57b7d&page=${page}&page_size=${pageSize}
+        `,
     }),
-    getPost: builder.query({
-      query: (itemId) => `/posts/${itemId}`
+    getGame: builder.query({
+      query: ({id}) => `
+        https://api.rawg.io/api/games?key=71c319a9886e4b2283f2eacd42d57b7d&${id}
+      `
     })
   }),
 })
-export const { useGetPostsQuery,useGetPostQuery } = apiSlice
+export const { useGetGamesQuery,useGetGameQuery } = apiSlice
