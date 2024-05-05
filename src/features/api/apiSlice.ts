@@ -5,13 +5,15 @@ export const apiSlice = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: 'https://api.rawg.io/api/games?key=71c319a9886e4b2283f2eacd42d57b7d' }),
   endpoints: (builder) => ({
     getGames: builder.query({
+    // количество игр на странице
       query: ({ page = 1, pageSize = 10 }) => `
         https://api.rawg.io/api/games?key=71c319a9886e4b2283f2eacd42d57b7d&page=${page}&page_size=${pageSize}
         `,
     }),
+    // детали игры по id
     getGame: builder.query({
-      query: ({id}) => `
-        https://api.rawg.io/api/games?key=71c319a9886e4b2283f2eacd42d57b7d&${id}
+      query: (itemId) => `
+        https://api.rawg.io/api/games?key=71c319a9886e4b2283f2eacd42d57b7d&${itemId}
       `
     })
   }),

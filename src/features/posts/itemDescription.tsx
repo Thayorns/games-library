@@ -6,10 +6,9 @@ import { useGetGameQuery } from "../api/apiSlice"
 import { Button } from 'antd'
 
 const ItemDescription = () => {
-    const { id } = useParams()
+    const { itemId } = useParams()
     
-    const {data: item, isFetching, isSuccess } = useGetGameQuery(id)
-    console.log(id);
+    const {data: item, isFetching, isSuccess } = useGetGameQuery(itemId)
     
 
     let content
@@ -19,14 +18,13 @@ const ItemDescription = () => {
     }else if(isSuccess){
         content = (
             <div className="item-description">
-                <span className='item-description-span'>id - {id}</span>
+                <span className='item-description-span'>id - {itemId}</span>
                 <h6>
                     {item.name}
                 </h6>
                 <p className='item-description-paragraph'>
                     {item.description}
                 </p>
-                {/* <img src={} alt=""/> */}
                 <Link to='/' className="button-view-post"><Button>назад</Button></Link>
             </div>
         )
