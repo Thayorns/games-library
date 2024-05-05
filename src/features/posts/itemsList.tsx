@@ -107,7 +107,7 @@ const ItemsList = () => {
   } else if (isError) {
     content = <div id="error-page">Что-то пошло не так.. {'message' in error ? error.message : ''}</div>//проверка на undefined
   }
-
+  // эндпоинт рендер
   return (
     <section>
       <h1>Игры</h1>
