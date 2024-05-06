@@ -192,6 +192,9 @@ img{
   .ant-btn span{
     font-size: 10px;
   }
+  select{
+    font-size: 8px;
+  }
   img{
     width: 35%;
     height: 60%;
