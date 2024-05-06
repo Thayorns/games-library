@@ -16,6 +16,7 @@
   height: 25px;
 }
 .ant-btn{
+  margin-top: 3px;
   padding: 1px;
   width: 75px;
   height: 30px;
@@ -30,7 +31,8 @@ ol{
   margin: 0px auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content:end;
+  align-items: center;
   background: #ffffff;
   font-size: 22px;
   border-bottom: #000000 1px solid;
@@ -41,6 +43,7 @@ ol{
 }
 select{
   width: 70px;
+  margin-left: 2px;
   height: 30px;
   border-radius: 6px;
 }
@@ -48,7 +51,7 @@ select{
   display: flex;
   flex-direction: row;
   width: 90%;
-  height: 120px;
+  height: 130px;
   margin: 0px auto;
   padding: 5px;
   color: rgb(0, 0, 0);
@@ -57,11 +60,11 @@ select{
 }
 .div-content-container,
 .div-platforms{
-  padding: 1px;
+  padding: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  align-items: start;
   width: 30%;
 }
 .div-platforms{
@@ -82,13 +85,14 @@ h1{
 h2{
   font-size: 22px;
   text-align: left;
-  margin: 0 auto;
+  margin: 0;
   padding: 3px;
 }
 strong{
   background: #f9dd0299;
   border-radius: 5px;
   padding: 1px;
+  
 }
 p{
   text-align: justify;
@@ -123,14 +127,14 @@ img{
 }
 .item-description-span,.item-description h6{
   color: rgb(0, 0, 0);
-  margin-bottom: 30px;
-  border: #000000 1px solid;
+  /* margin-bottom: 30px; */
+  /* border: #000000 1px solid; */
 }
 .item-description{
   position: relative;
   background: #ffffff;
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   margin: 0 auto;
   text-align: center;
   display: flex;
@@ -146,9 +150,12 @@ img{
 .item-description >p {
   color: rgb(0, 0, 0);
   white-space: wrap;
-  margin: 50px auto;
+  margin: 0 auto;
   width: 80%;
   padding: 10px;
+}
+.item-description button{
+  margin-bottom: 30px;
 }
 .newposts-loading{
   margin-top: 50px;
@@ -167,7 +174,7 @@ img{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
   }
   h2,span{
     font-size: 12px;
@@ -175,6 +182,15 @@ img{
   }
   a.button-view-post{
     font-size: 8px;
+  }
+  .ant-btn{
+    margin-top: 0;
+    width: 60px;
+    height: 18px;
+    line-height: 10px;
+  }
+  .ant-btn span{
+    font-size: 10px;
   }
   img{
     width: 35%;
@@ -194,5 +210,11 @@ img{
   .ant-carousel .slick-slide img{
     width: 530px;
     height:280px;
+  }
+  select{
+    width: 100px;
+    margin-left: 2px;
+    height: 30px;
+    border-radius: 6px;
   }
 }
