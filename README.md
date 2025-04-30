@@ -1,6 +1,6 @@
 # 🎬 Games library 
 
-[![GitHub Stars](https://img.shields.io/github/stars/Thayorns/twitch-css-modifier?style=social)](https://github.com/Thayorns/twitch-css-modifier)
+[![GitHub Stars](https://img.shields.io/github/stars/Thayorns/games-library?style=social)](https://github.com/Thayorns/games-library)
 [![Telegram](https://img.shields.io/badge/-Telegram-0088cc?style=flat&logo=Telegram&logoColor=white)](https://t.me/@thayorn)
 [![Email](https://img.shields.io/badge/-Email-%23333?style=flat&logo=gmail)](mailto:thayornswordsman@gmail.com)
 
@@ -25,7 +25,6 @@ This react app works with the games database API, takes 50 games from it and sho
 
 ### 🎨 UI Libraries
 ![Ant Design](https://img.shields.io/badge/-Ant_Design-0170FE?style=flat&logo=ant-design&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/-Bootstrap-7952B3?style=flat&logo=bootstrap&logoColor=white)
 
 ### 🏗️ Architecture
 ![FSD Methodology](https://img.shields.io/badge/-FSD_Methodology-2496ED?style=flat&logo=arc&logoColor=white) 🏗️
