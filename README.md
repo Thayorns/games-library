@@ -6,6 +6,8 @@
 
 This react app works with the games database API, takes 50 games from it and shows them as table list items. User may filter the games in order to fit his needs and find out which game he could play with.
 
+[Games library](https://games-query.netlify.app/)
+
 ## ✨ Features
 
 - filter the games with your needs
