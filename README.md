@@ -28,10 +28,3 @@ This react app works with the games database API, takes 50 games from it and sho
 
 ### 🏗️ Architecture
 ![FSD Methodology](https://img.shields.io/badge/-FSD_Methodology-2496ED?style=flat&logo=arc&logoColor=white) 🏗️
-
-## 🤝 Contributing
-
-Pull requests are welcome!
-
-1. 🐛 Open an issue
-2. 💻 Or submit a PR
